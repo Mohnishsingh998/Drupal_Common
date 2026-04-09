@@ -1,0 +1,18 @@
+uuid: e88914d5-05c4-455f-ab2d-ceed36556b79
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Type_01
+type: type_01
+description: 'poiuytrewqasdfghjkl, vcxx'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

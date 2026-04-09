@@ -1,0 +1,29 @@
+uuid: 35d7f22d-fb91-4bd1-80df-16f0a14a9e8e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.type_01.field_headline
+    - node.type.type_01
+  module:
+    - user
+id: node.type_01.default
+targetEntityType: node
+bundle: type_01
+mode: default
+content:
+  field_headline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
