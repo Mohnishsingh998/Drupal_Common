@@ -1,0 +1,10 @@
+# Ignore the dependencies folder
+
+
+# Ignore environment variables
+.env
+.env.local
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
