@@ -1,0 +1,20 @@
+uuid: bd94f6f3-f847-47f9-bb9d-3a3062226525
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.type_01
+  module:
+    - announcements_feed
+    - block
+    - node
+id: owner
+label: Owner
+weight: 4
+is_admin: false
+permissions:
+  - 'access announcements'
+  - 'administer blocks'
+  - 'create type_01 content'
+  - 'delete any type_01 content'
+  - 'edit any type_01 content'
