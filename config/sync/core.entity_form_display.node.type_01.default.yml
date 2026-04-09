@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.type_01.field_headline
+    - field.field.node.type_01.field_sub_headline
     - node.type.type_01
   module:
     - path
@@ -21,6 +22,14 @@ content:
   field_headline:
     type: string_textfield
     weight: 121
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sub_headline:
+    type: string_textfield
+    weight: 122
     region: content
     settings:
       size: 60

@@ -17,3 +17,4 @@ sites/*/private/
 
 # Ignore development/test folders
 sites/simpletest
+/example.gitignore

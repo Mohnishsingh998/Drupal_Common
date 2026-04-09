@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.type_01.field_headline
+    - field.field.node.type_01.field_sub_headline
     - node.type.type_01
   module:
     - user
@@ -19,6 +20,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_sub_headline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }
