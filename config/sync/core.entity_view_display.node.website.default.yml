@@ -1,0 +1,38 @@
+uuid: b51c06c0-dd4a-44e9-9e1d-0561b8a0b662
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.website.field_headline
+    - field.field.node.website.field_sub_headline
+    - node.type.website
+  module:
+    - user
+id: node.website.default
+targetEntityType: node
+bundle: website
+mode: default
+content:
+  field_headline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_sub_headline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

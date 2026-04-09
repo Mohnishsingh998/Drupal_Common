@@ -1,0 +1,19 @@
+uuid: 5bb162fe-a229-49be-bafd-be56285f14a8
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_headline
+    - node.type.website
+id: node.website.field_headline
+field_name: field_headline
+entity_type: node
+bundle: website
+label: Headline_1
+description: afsgbd
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
