@@ -1,0 +1,30 @@
+uuid: ddff5b62-e4ff-4eb3-a70f-2bd82f8de03c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.public_up.field_files_upload_01
+    - node.type.public_up
+  module:
+    - file
+    - user
+id: node.public_up.default
+targetEntityType: node
+bundle: public_up
+mode: default
+content:
+  field_files_upload_01:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

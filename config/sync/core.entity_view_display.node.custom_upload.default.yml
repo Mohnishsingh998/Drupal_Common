@@ -1,0 +1,30 @@
+uuid: 610c53aa-110d-4c49-b044-f343643be472
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.custom_upload.field_files_to_upload
+    - node.type.custom_upload
+  module:
+    - file
+    - user
+id: node.custom_upload.default
+targetEntityType: node
+bundle: custom_upload
+mode: default
+content:
+  field_files_to_upload:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

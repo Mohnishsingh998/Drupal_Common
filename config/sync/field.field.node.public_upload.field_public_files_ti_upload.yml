@@ -1,0 +1,27 @@
+uuid: b2e95e99-a225-4f47-a018-2c24972b85f1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_files_ti_upload
+    - node.type.public_upload
+  module:
+    - file
+id: node.public_upload.field_public_files_ti_upload
+field_name: field_public_files_ti_upload
+entity_type: node
+bundle: public_upload
+label: public_files_ti_upload
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf png'
+  max_filesize: '50 MB'
+  description_field: false
+field_type: file

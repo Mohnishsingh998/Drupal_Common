@@ -1,0 +1,11 @@
+uuid: 7dc81e07-ecfd-4210-9749-dc08a214e246
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.custom_upload
+id: node.custom_upload
+target_entity_type_id: node
+target_bundle: custom_upload
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,11 @@
+uuid: 89852a6b-57a3-4b1a-87b6-8d5bb1dc90d5
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.public_up
+id: node.public_up
+target_entity_type_id: node
+target_bundle: public_up
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,27 @@
+uuid: 8a1353f8-0ad2-4f62-b10d-e376e7929e44
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files_to_upload
+    - node.type.custom_upload
+  module:
+    - file
+id: node.custom_upload.field_files_to_upload
+field_name: field_files_to_upload
+entity_type: node
+bundle: custom_upload
+label: files_to_upload
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf png'
+  max_filesize: '50 MB'
+  description_field: false
+field_type: file
