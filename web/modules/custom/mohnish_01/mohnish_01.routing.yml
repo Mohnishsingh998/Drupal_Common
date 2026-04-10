@@ -1,0 +1,7 @@
+mohnish_01.mohnish01:
+  path: '/mohnish-01/mohnish01'
+  defaults:
+    _title: 'Mohnish01'
+    _controller: '\Drupal\mohnish_01\Controller\Mohnish01Controller'
+  requirements:
+    _permission: 'access content'

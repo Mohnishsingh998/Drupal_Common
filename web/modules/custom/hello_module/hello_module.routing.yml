@@ -1,0 +1,7 @@
+hello_module.welcome:
+  path: '/welcome'
+  defaults:
+    _controller: 'Drupal\hello_module\Controller\WelcomeController::welcome'
+    _title: 'Welcome to techX session'
+  requirements:
+    _permission: 'access content'
