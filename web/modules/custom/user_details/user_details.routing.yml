@@ -1,0 +1,17 @@
+user_details.form:
+  path: '/user-detail'
+  defaults:
+    _title: 'User Details Form'
+    _form: '\Drupal\user_details\Form\UserDetailsForm'
+  requirements:
+    _permission: 'access content'
+
+
+user_details.greet:
+  path: '/greet/{name}'
+  defaults:
+    _controller: '\Drupal\user_details\Controller\GreetController::greet'
+    _title: 'Greeting Page'
+  requirements:
+    _permission: 'access content'
+  

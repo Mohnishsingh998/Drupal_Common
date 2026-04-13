@@ -1,0 +1,25 @@
+uuid: 54458f41-f736-4043-b72e-7f3f21594168
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - views.view.related_articles
+  module:
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__related_articles_block_1
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:related_articles-block_1'
+settings:
+  id: 'views_block:related_articles-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: null
+visibility: {  }

@@ -1,0 +1,5 @@
+name: 'User Details'
+type: module
+description: 'A custom module to save the user Details'
+package: Custom
+core_version_requirement: ^10 || ^11

@@ -8,7 +8,6 @@ dependencies:
     - comment
     - filter
     - search
-    - system
 _core:
   default_config_hash: xLG41YbRo2NP-0SgRNTkMzLEuaeibanGXgUTbdIcIIg
 id: anonymous
@@ -17,6 +16,5 @@ weight: 0
 is_admin: false
 permissions:
   - 'access comments'
-  - 'access content'
   - 'search content'
   - 'use text format restricted_html'
