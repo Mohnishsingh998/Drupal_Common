@@ -2,23 +2,17 @@
 
 use Drupal\Core\Form\FormStateInterface;
 
-/**
- * Implements hook_form_alter().
- */
 function user_details_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
   if ($form_id === 'node_page_form') {
-
-    $form['#validate'][] = 'user_details_custom_validate';
+    $form['#validate'][] = 'user_details_page_form_validate';
   }
 }
 
 /**
  * Custom validation handler.
  */
-function user_details_custom_validate(&$form, FormStateInterface $form_state) {
-
-  \Drupal::logger('debug')->notice('FORM VALIDATION TRIGGERED');
+function user_details_page_form_validate(&$form, FormStateInterface $form_state) {
 
   $title = $form_state->getValue('title')[0]['value'];
 

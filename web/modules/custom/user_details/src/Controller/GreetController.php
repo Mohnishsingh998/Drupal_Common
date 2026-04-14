@@ -7,9 +7,7 @@ class GreetController extends ControllerBase {
 
   public function greet($name) {
     return [
-      '#markup' => $this->t('Hello @name! Welcome to Drupal.', [
-        '@name' => $name,
-      ]),
+  '#markup' => 'Hello ' . $name . '! Welcome to Drupal.',
     ];
   }
 }
