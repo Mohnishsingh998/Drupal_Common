@@ -1,0 +1,46 @@
+uuid: db3b51dc-99f7-483b-929e-5f93c6a53327
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.cta
+    - field.field.node.review.field__image
+    - field.field.node.review.field_body
+    - field.field.node.review.field_call_to_action_link
+    - field.field.node.review.field_image_text
+    - node.type.review
+  module:
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.review.cta
+targetEntityType: node
+bundle: review
+mode: cta
+content:
+  field_call_to_action_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field__image: true
+  field_body: true
+  field_image_text: true
+  langcode: true

@@ -12,7 +12,7 @@ module:
   comment: 0
   config: 0
   contextual: 0
-  custom_module: 3
+  ctools: 0
   datetime: 0
   dblog: 0
   devel: 0
@@ -28,11 +28,14 @@ module:
   history: 0
   image: 0
   language: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   locale: 0
+  media: 0
+  media_library: 0
   menu_link_content: 0
   menu_ui: 0
-  mumbai_indians: 1
   node: 0
   options: 0
   page_cache: 0
@@ -48,9 +51,11 @@ module:
   toolbar: 0
   update: 0
   user: 0
-  user_details: 10
   views_ui: 0
+  mumbai_indians: 1
   pathauto: 1
+  custom_module: 3
+  user_details: 10
   views: 10
   standard: 1000
 theme:

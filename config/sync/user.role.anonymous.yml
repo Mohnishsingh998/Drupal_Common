@@ -7,6 +7,7 @@ dependencies:
   module:
     - comment
     - filter
+    - media
     - search
 _core:
   default_config_hash: xLG41YbRo2NP-0SgRNTkMzLEuaeibanGXgUTbdIcIIg
@@ -18,3 +19,4 @@ permissions:
   - 'access comments'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view media'

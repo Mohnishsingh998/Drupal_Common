@@ -1,0 +1,91 @@
+uuid: 1257f8cd-ba07-49d3-a735-78b15e5a1533
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.review.field__image
+    - field.field.node.review.field_body
+    - field.field.node.review.field_call_to_action_link
+    - field.field.node.review.field_image_text
+    - node.type.review
+  module:
+    - ctools
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Hero section'
+          context_mapping: {  }
+        components:
+          0aafc586-9c3b-411f-8670-0296a32de888:
+            uuid: 0aafc586-9c3b-411f-8670-0296a32de888
+            region: content
+            configuration:
+              id: 'entity_view:node'
+              label: 'Entity view (Content)'
+              label_display: '0'
+              provider: ctools
+              context_mapping:
+                entity: layout_builder.entity
+              view_mode: banner
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          c282562d-8691-4d4b-a61f-4baf3917d18a:
+            uuid: c282562d-8691-4d4b-a61f-4baf3917d18a
+            region: first
+            configuration:
+              id: 'entity_view:node'
+              label: 'Entity view (Content)'
+              label_display: '0'
+              provider: ctools
+              context_mapping:
+                entity: layout_builder.entity
+              view_mode: cta
+            weight: 0
+            additional: {  }
+          4bd40430-f707-4017-ac1e-8eb4dbc69c8d:
+            uuid: 4bd40430-f707-4017-ac1e-8eb4dbc69c8d
+            region: second
+            configuration:
+              id: 'field_block:node:review:field_body'
+              label: body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.review.default
+targetEntityType: node
+bundle: review
+mode: default
+content: {  }
+hidden:
+  field__image: true
+  field_body: true
+  field_call_to_action_link: true
+  field_image_text: true
+  langcode: true
+  links: true

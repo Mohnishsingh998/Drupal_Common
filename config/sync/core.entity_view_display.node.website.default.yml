@@ -8,40 +8,85 @@ dependencies:
     - field.field.node.website.field_sub_headline
     - node.type.website
   module:
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          6f4c9155-7f35-4948-be30-e0b951fac0cc:
+            uuid: 6f4c9155-7f35-4948-be30-e0b951fac0cc
+            region: content
+            configuration:
+              id: 'extra_field_block:node:website:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          e6778742-d8df-4c78-ac39-dddffb680d3f:
+            uuid: e6778742-d8df-4c78-ac39-dddffb680d3f
+            region: content
+            configuration:
+              id: 'field_block:node:website:field_headline'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          559c6ac2-755f-45e3-8d1a-0dde3aa5a7ab:
+            uuid: 559c6ac2-755f-45e3-8d1a-0dde3aa5a7ab
+            region: content
+            configuration:
+              id: 'field_block:node:website:field_sub_headline'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          5b226578-c95d-4f81-ae06-e9be6910462c:
+            uuid: 5b226578-c95d-4f81-ae06-e9be6910462c
+            region: content
+            configuration:
+              id: 'field_block:node:website:field_locaition'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
 id: node.website.default
 targetEntityType: node
 bundle: website
 mode: default
-content:
-  field_headline:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  field_locaition:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 103
-    region: content
-  field_sub_headline:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
+content: {  }
 hidden:
   langcode: true
+  links: true
+  field_headline: true
+  field_sub_headline: true
+  field_locaition: true

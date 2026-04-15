@@ -1,0 +1,11 @@
+uuid: e1b6856b-0a68-41e1-ad6c-0d98228ea53c
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: node.cta
+label: CTA
+description: null
+targetEntityType: node
+cache: true

@@ -1,0 +1,7 @@
+name: 'Student Feedback'
+type: module
+description: 'A custom Module module that allows, Storing student feedback, Configuring module settings from admin, Exposing reusable logic via a service'
+package: Storing student feedback (name, email, message, rating)
+core_version_requirement: ^10 || ^11
+dependencies:
+  - configuring_module_settings_from_admin:configuring_module_settings_from_admin
