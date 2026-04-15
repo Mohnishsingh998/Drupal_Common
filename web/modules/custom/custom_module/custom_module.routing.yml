@@ -1,0 +1,16 @@
+custom_module.form:
+  path: '/form'
+  defaults:
+    _form: '\Drupal\custom_module\Form\UserForm'
+    _title: 'User form'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+custom_module.greet:
+  path: '/greetme/{name}'
+  defaults:
+    _controller: '\Drupal\custom_module\Controller\GreetController::greet'
+    _title: 'Greeting Page'
+  requirements:
+    _permission: 'access content'    

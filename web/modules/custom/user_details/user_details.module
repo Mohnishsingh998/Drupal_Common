@@ -8,7 +8,6 @@ function user_details_form_alter(&$form, FormStateInterface $form_state, $form_i
     $form['#validate'][] = 'user_details_page_form_validate';
   }
 }
-
 /**
  * Custom validation handler.
  */

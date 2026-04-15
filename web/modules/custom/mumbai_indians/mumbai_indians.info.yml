@@ -1,0 +1,5 @@
+name: 'Mumbai_indians'
+type: module
+description: 'A custom Hook to Understand the basics of the module loading and loading change in druapal'
+package: Custom
+core_version_requirement: ^10 || ^11

@@ -1,0 +1,5 @@
+name: 'custom_2'
+type: module
+description: 'A second Module to unserstand the basics of module loading and working'
+package: Custom
+core_version_requirement: ^10 || ^11
