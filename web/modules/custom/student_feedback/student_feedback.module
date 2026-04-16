@@ -1,0 +1,12 @@
+<?php
+
+function student_feedback_mail($key, &$message, $params) {
+        \Drupal::logger('student_feedback')->notice('hook_mail executed');
+  switch ($key) {
+
+    case 'feedback_notification':
+      \Drupal::service('student_feedback.mail_builder')
+        ->build($message, $params);
+      break;
+  }
+}
