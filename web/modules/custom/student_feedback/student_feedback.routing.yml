@@ -1,23 +1,23 @@
 student_feedback.form:
   path: '/feedback'
   defaults:
-    _form: '\Drupal\student_feedback\Form\Feedback'
+    _form: '\Drupal\student_feedback\Form\FeedbackForm'
     _title: 'Submit Feedback'
   requirements:
     _permission: 'access content'
 
 student_feedback.edit:
-  path: '/feedback/edit/{id}'
+  path: '/feedback/edit/{feedbackId}'
   defaults:
-    _form: '\Drupal\student_feedback\Form\Feedback'
+    _form: '\Drupal\student_feedback\Form\FeedbackForm'
     _title: 'Edit Feedback'
   requirements:
     _permission: 'access content'
 
 student_feedback.delete:
-  path: '/feedback/delete/{id}'
+  path: '/feedback/delete/{feedbackId}'
   defaults:
-    _controller: '\Drupal\student_feedback\Controller\FeedbackController::delete'
+    _controller: '\Drupal\student_feedback\Controller\FeedbackController::deleteFeedback'
   requirements:
     _permission: 'access content'
 
@@ -32,7 +32,7 @@ student_feedback.settings:
 student_feedback.list:
   path: '/admin/feedback'
   defaults:
-    _controller: '\Drupal\student_feedback\Controller\FeedbackController::list'
+    _controller: '\Drupal\student_feedback\Controller\FeedbackController::listFeedback'
     _title: 'Feedback List'
   requirements:
     _permission: 'access content'

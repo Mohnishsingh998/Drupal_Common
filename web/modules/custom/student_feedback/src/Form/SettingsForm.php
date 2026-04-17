@@ -28,25 +28,26 @@ class SettingsForm extends ConfigFormBase {
    * Overiding the inbuilt buildForm method for custom use.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('student_feedback.settings');
+    $feedbackConfig = $this->config('student_feedback.settings');
 
     $form['enable_feedback'] = [
       '#type' => 'checkbox',
       '#title' => 'Enable Feedback',
-      '#default_value' => $config->get('enable_feedback'),
+      '#default_value' => $feedbackConfig->get('enable_feedback'),
     ];
 
     $form['min_rating'] = [
       '#type' => 'number',
       '#title' => 'Minimum Rating',
-      '#default_value' => $config->get('min_rating'),
+      '#default_value' => $feedbackConfig->get('min_rating'),
     ];
 
     $form['admin_email'] = [
       '#type' => 'email',
       '#title' => 'Admin Email',
-      '#default_value' => $config->get('admin_email'),
+      '#default_value' => $feedbackConfig->get('admin_email'),
     ];
+
     // A method used in drupal to implement the config form.
     return parent::buildForm($form, $form_state);
   }
@@ -55,7 +56,9 @@ class SettingsForm extends ConfigFormBase {
    * Again the inbuilt method to implement the subitFrom method for config form.
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('student_feedback.settings')
+    $feedbackConfig = $this->config('student_feedback.settings');
+
+    $feedbackConfig
       ->set('enable_feedback', $form_state->getValue('enable_feedback'))
       ->set('min_rating', $form_state->getValue('min_rating'))
       ->set('admin_email', $form_state->getValue('admin_email'))

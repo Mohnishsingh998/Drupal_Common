@@ -1,0 +1,23 @@
+<div class="feedback-list">
+  {% for item in items %}
+    <div class="card">
+      
+      <h3>{{ item.name }}</h3>
+      <div class="email">{{ item.email }}</div>
+
+      <div class="message">
+        {{ item.message }}
+      </div>
+
+      <div class="rating">
+        ⭐ {{ item.rating }}/5
+      </div>
+
+      <div class="actions">
+        <a href="/feedback/edit/{{ item.id }}">Edit</a>
+        <a href="/feedback/delete/{{ item.id }}">Delete</a>
+      </div>
+
+    </div>
+  {% endfor %}
+</div>

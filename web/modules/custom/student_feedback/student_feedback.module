@@ -1,7 +1,7 @@
 <?php
 
 function student_feedback_mail($key, &$message, $params) {
-        \Drupal::logger('student_feedback')->notice('hook_mail executed');
+  \Drupal::logger('student_feedback')->notice('hook_mail executed');
   switch ($key) {
 
     case 'feedback_notification':
@@ -9,4 +9,13 @@ function student_feedback_mail($key, &$message, $params) {
         ->build($message, $params);
       break;
   }
+}
+
+function student_feedback_theme() {
+  return [
+    'feedback_list' => [
+      'variables' => ['items' => NULL],
+      'template' => 'feedback-list',
+    ],
+  ];
 }

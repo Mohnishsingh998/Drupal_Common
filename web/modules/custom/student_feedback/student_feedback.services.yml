@@ -1,11 +1,11 @@
 services:
   student_feedback.manager:
-    class: Drupal\student_feedback\Service\Manage
-    arguments: ['@config.factory','@student_feedback.mail_service']
+    class: Drupal\student_feedback\Service\FeedbackManager
+    arguments: ['@config.factory', '@student_feedback.mail_service']
 
   student_feedback.mail_service:
     class: Drupal\student_feedback\Service\MailService
     arguments: ['@plugin.manager.mail', '@config.factory', '@current_user']
-  
+
   student_feedback.mail_builder:
     class: Drupal\student_feedback\Service\MailBuilder

@@ -2,7 +2,6 @@
 
 namespace Drupal\student_feedback\Controller;
 
-use Drupal\Core\Url;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -11,10 +10,10 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class FeedbackController extends ControllerBase {
 
-  protected $manager;
+  protected $feedbackManager;
 
-  public function __construct($manager) {
-    $this->manager = $manager;
+  public function __construct($feedbackManager) {
+    $this->feedbackManager = $feedbackManager;
   }
 
   /**
@@ -29,46 +28,23 @@ class FeedbackController extends ControllerBase {
   /**
    * It is used for rendering the list of feedback of feedBack list page.
    */
-  public function list() {
-    $data = $this->manager->getAllFeedback();
-
-    $rows = [];
-    foreach ($data as $item) {
-      $rows[] = [
-        $item->name,
-        $item->email,
-        $item->message,
-        $item->rating,
-        [
-          'data' => [
-            '#type' => 'operations',
-            '#links' => [
-              'edit' => [
-                'title' => 'Edit',
-                'url' => Url::fromRoute('student_feedback.edit', ['id' => $item->id]),
-              ],
-              'delete' => [
-                'title' => 'Delete',
-                'url' => Url::fromRoute('student_feedback.delete', ['id' => $item->id]),
-              ],
-            ],
-          ],
-        ],
-      ];
-    }
+  public function listFeedback() {
+    $feedbackData = $this->feedbackManager->getAllFeedback();
 
     return [
-      '#type' => 'table',
-      '#header' => ['Name', 'Email', 'Message', 'Rating', 'Operations'],
-      '#rows' => $rows,
+      '#theme' => 'feedback_list',
+      '#items' => $feedbackData,
+      '#attached' => [
+        'library' => ['student_feedback/styles'],
+      ],
     ];
   }
 
   /**
    * Implelemts the dependency injected method named deletefeedbackbyId form the servie.
    */
-  public function delete($id) {
-    $this->manager->deleteFeedback($id);
+  public function deleteFeedback($id) {
+    $this->feedbackManager->deleteFeedback($id);
     $this->messenger()->addMessage('Deleted');
     return $this->redirect('student_feedback.list');
   }
