@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Making custom config form using the Config form base class.
  */
-class SettingsForm extends ConfigFormBase {
+class ConfigForm extends ConfigFormBase {
 
   /**
    * Get the config setting from the student_feedback.settings.

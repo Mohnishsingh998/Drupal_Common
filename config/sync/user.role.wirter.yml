@@ -1,0 +1,27 @@
+uuid: 29e248a1-40ca-44fa-aac8-287897276712
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_ui
+    - node
+    - system
+id: wirter
+label: wirter
+weight: 8
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'administer display modes'
+  - 'create article content'
+  - 'edit any article content'
+  - 'use editorial transition create_new_draft'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'

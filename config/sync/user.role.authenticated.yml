@@ -4,14 +4,19 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.webform_default
+    - node.type.leave_application
   module:
     - comment
+    - field_ui
     - file
     - filter
     - media
+    - node
     - search
     - shortcut
     - system
+    - views_ui
 _core:
   default_config_hash: hcfESiA8tr3D1muRk2KF7tbcun16ZJlG1R5SzKGed6g
 id: authenticated
@@ -21,10 +26,23 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access content overview'
   - 'access shortcuts'
+  - 'administer content types'
+  - 'administer display modes'
+  - 'administer node published status'
+  - 'administer nodes'
+  - 'administer views'
+  - 'create leave_application content'
+  - 'delete any leave_application content'
+  - 'delete leave_application revisions'
   - 'delete own files'
+  - 'delete own leave_application content'
+  - 'edit any leave_application content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format webform_default'
   - 'view media'
+  - 'view own unpublished content'

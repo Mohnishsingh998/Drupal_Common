@@ -1,0 +1,18 @@
+uuid: 564f734d-7f3d-453e-816c-b79ae801ad73
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Leave Application'
+type: leave_application
+description: 'A draft of the Leave'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

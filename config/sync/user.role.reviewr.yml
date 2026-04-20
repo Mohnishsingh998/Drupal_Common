@@ -1,0 +1,31 @@
+uuid: 356b2620-b130-4945-b8ff-09621a763a47
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - node
+    - system
+id: reviewr
+label: reviewr
+weight: 9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'administer node published status'
+  - 'bypass node access'
+  - 'edit any article content'
+  - 'edit own article content'
+  - 'revert article revisions'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition publish'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

@@ -1,0 +1,27 @@
+uuid: 24f47508-67a9-4387-9e31-2d83cc945aa2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachment
+    - node.type.leave_application
+  module:
+    - file
+id: node.leave_application.field_attachment
+field_name: field_attachment
+entity_type: node
+bundle: leave_application
+label: Attachment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: '20 MB'
+  description_field: false
+field_type: file

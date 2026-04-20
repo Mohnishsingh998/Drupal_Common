@@ -1,5 +1,5 @@
 services:
-  student_feedback.manager:
+  student_feedback.feedback_manager:
     class: Drupal\student_feedback\Service\FeedbackManager
     arguments: ['@config.factory', '@student_feedback.mail_service']
 

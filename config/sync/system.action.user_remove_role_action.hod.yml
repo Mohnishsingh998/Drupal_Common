@@ -1,0 +1,14 @@
+uuid: 7d8c6244-b281-430c-8f0f-999f53fd072a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - user.role.hod
+  module:
+    - user
+id: user_remove_role_action.hod
+label: 'Remove the HOD role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: hod

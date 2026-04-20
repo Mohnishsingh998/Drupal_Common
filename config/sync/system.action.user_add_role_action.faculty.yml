@@ -1,0 +1,14 @@
+uuid: 13caf647-0e53-4b26-ac95-7e386597c737
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - user.role.faculty
+  module:
+    - user
+id: user_add_role_action.faculty
+label: 'Add the Faculty role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: faculty

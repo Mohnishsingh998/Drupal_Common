@@ -1,0 +1,19 @@
+uuid: d14b9af9-bd6e-4733-9909-1823de276046
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status_comment_admin
+    - node.type.submission
+id: node.submission.field_status_comment_admin
+field_name: field_status_comment_admin
+entity_type: node
+bundle: submission
+label: 'Status Comment (Admin)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

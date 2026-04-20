@@ -1,0 +1,29 @@
+uuid: ed320cce-2dac-49fa-a562-2893fccb70df
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_applicant
+    - node.type.leave_application
+id: node.leave_application.field_applicant
+field_name: field_applicant
+entity_type: node
+bundle: leave_application
+label: Applicant
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: true
+field_type: entity_reference

@@ -21,7 +21,7 @@ class FeedbackController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('student_feedback.manager')
+      $container->get('student_feedback.feedback_manager')
     );
   }
 

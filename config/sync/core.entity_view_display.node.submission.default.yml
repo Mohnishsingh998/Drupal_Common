@@ -1,0 +1,46 @@
+uuid: d96a1251-2420-4cf3-a122-9237e4c41655
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.submission.field__body
+    - field.field.node.submission.field_status_comment_admin
+    - field.field.node.submission.field_status_comment_faculty
+    - node.type.submission
+  module:
+    - user
+id: node.submission.default
+targetEntityType: node
+bundle: submission
+mode: default
+content:
+  field__body:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_status_comment_admin:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_status_comment_faculty:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

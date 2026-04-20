@@ -26,6 +26,7 @@
         "drupal/smtp": "^1.4",
         "drupal/token": "^1.17",
         "drupal/webform": "^6.3@beta",
+        "drupal/workflow": "^2.2",
         "drush/drush": "^13.7"
     },
     "conflict": {

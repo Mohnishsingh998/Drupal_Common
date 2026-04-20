@@ -1,0 +1,23 @@
+uuid: da958b5b-5cd6-4d7a-9bd3-b1ba6cb3ded9
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.leave_application
+  module:
+    - block_content
+    - node
+    - system
+id: student
+label: Student
+weight: 5
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access content'
+  - 'access content overview'
+  - 'edit any leave_application content'
+  - 'edit own leave_application content'
+  - 'view leave_application revisions'
+  - 'view own unpublished content'

@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  *
  */
-class FeedbackForm extends FormBase {
+class ContentForm extends FormBase {
 
   protected $feedbackManager;
   protected $feedbackId = NULL;
@@ -19,11 +19,11 @@ class FeedbackForm extends FormBase {
   }
 
   /**
-   * similar like new Feedback().  -- > $container inject depencecy of the student_feedback.manager to manage such that we can use them here.
+   * similar like new Feedback().  -- > $container inject depencecy of the student_feedback.feedback_manager to manage such that we can use them here.
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('student_feedback.manager')
+      $container->get('student_feedback.feedback_manager')
     );
   }
 
@@ -73,7 +73,7 @@ class FeedbackForm extends FormBase {
       '#type' => 'select',
       '#title' => 'Rating',
       '#options' => [1, 2, 3, 4, 5],
-      '#default_value' => $feedbackData->rating ?? 1,
+      '#default_value' => $feedbackData->rating ?? 0,
       '#required' => TRUE,
     ];
 

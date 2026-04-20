@@ -1,0 +1,22 @@
+uuid: 8bc83e62-a139-4381-9f17-8788fcc682ac
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.submission
+id: node.submission.status
+field_name: status
+entity_type: node
+bundle: submission
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

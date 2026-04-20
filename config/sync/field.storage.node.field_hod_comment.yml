@@ -1,0 +1,30 @@
+uuid: 8a435fa4-a585-4f62-a2aa-0c02ccc0af6d
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_hod_comment
+field_name: field_hod_comment
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: approved
+      label: Approved
+    -
+      value: rejected
+      label: Rejected
+    -
+      value: in_review
+      label: 'In Review'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

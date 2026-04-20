@@ -1,0 +1,23 @@
+uuid: d39c5641-50e5-47a4-aabb-338511d58589
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hod_comment
+    - node.type.leave_application
+  module:
+    - options
+id: node.leave_application.field_hod_comment
+field_name: field_hod_comment
+entity_type: node
+bundle: leave_application
+label: 'HOD Comment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: in_review
+default_value_callback: ''
+settings: {  }
+field_type: list_string

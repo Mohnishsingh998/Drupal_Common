@@ -1,0 +1,14 @@
+uuid: e78ac147-99fc-4abb-a459-c1d16337f883
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - user.role.wirter
+  module:
+    - user
+id: user_remove_role_action.wirter
+label: 'Remove the wirter role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: wirter

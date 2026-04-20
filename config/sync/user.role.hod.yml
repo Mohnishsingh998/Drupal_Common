@@ -1,0 +1,19 @@
+uuid: 099b2f9c-a8e9-4a83-b055-860256256fc0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.leave_application
+  module:
+    - node
+    - system
+id: hod
+label: HOD
+weight: 7
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'edit any leave_application content'
+  - 'view leave_application revisions'
