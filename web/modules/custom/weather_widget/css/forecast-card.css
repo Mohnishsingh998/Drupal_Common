@@ -1,0 +1,27 @@
+.forecast-card {
+  padding: 18px;
+  border-radius: 14px;
+  color: #fff;
+}
+
+.forecast-card.is-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.forecast-card.is-loading::after {
+  content: 'Fetching your location...';
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.forecast-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+}
+
+.is-clear { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.is-rain { background: linear-gradient(135deg, #3a6073, #16222a); }
+.is-clouds { background: linear-gradient(135deg, #757f9a, #d7dde8); }

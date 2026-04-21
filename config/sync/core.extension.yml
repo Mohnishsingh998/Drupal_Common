@@ -28,6 +28,7 @@ module:
   help: 0
   history: 0
   image: 0
+  jsonapi: 0
   language: 0
   layout_builder: 0
   layout_discovery: 0
@@ -44,6 +45,7 @@ module:
   path_alias: 0
   pgsql: 0
   search: 0
+  serialization: 0
   shortcut: 0
   smtp: 0
   student_feedback: 0
@@ -55,6 +57,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  weather_widget: 0
   webform: 0
   webform_ui: 0
   workflows: 0

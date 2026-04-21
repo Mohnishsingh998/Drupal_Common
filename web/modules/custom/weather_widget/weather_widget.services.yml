@@ -1,0 +1,11 @@
+services:
+  logger.channel.weather_widget:
+    parent: logger.channel_base
+    arguments: ['weather_widget']
+
+  weather_widget.weather_service:
+    class: Drupal\weather_widget\Service\WeatherService
+    arguments:
+      - '@http_client'
+      - '@settings'
+      - '@logger.channel.weather_widget'

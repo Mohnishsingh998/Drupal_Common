@@ -1,0 +1,30 @@
+<div class="forecast-card forecast--{{ theme_style }} is-{{ data.condition|lower }}">
+  {% if data.error %}
+    <div class="forecast-card--error">{{ data.error }}</div>
+  {% else %}
+    <div class="forecast-card__header">
+      <div class="forecast-card__city">
+        {{ data.city }}<br>
+      </div>
+      <div class="forecast-card__updated">
+        Updated {{ data.updated }}<br>
+      </div>
+    </div>
+
+    <div class="forecast-card__main">
+      <div class="forecast-card__temp">
+        {{ data.temp }}°<br>
+      </div>
+      <div class="forecast-card__icon">
+        <img src="https://openweathermap.org/img/wn/{{ data.icon }}@2x.png"><br>
+      </div>
+    </div>
+
+    <div class="forecast-card__meta">
+      <span>Humidity {{ data.humidity }}%</span><br>
+      <span>Wind {{ data.wind }} m/s</span><br>
+      <span>Sunrise {{ data.sunrise }}</span><br>
+      <span>Sunset {{ data.sunset }}</span>
+    </div>
+  {% endif %}
+</div>

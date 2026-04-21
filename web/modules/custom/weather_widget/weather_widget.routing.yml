@@ -1,0 +1,14 @@
+weather_widget.settings:
+  path: '/admin/config/system/weather-widget'
+  defaults:
+    _form: '\Drupal\weather_widget\Form\WeatherSettingsForm'
+    _title: 'Weather Widget Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+weather_widget.location_weather:
+  path: '/weather-widget/location'
+  defaults:
+    _controller: '\Drupal\weather_widget\Controller\WeatherController::getLocationWeather'
+  requirements:
+    _permission: 'access content'

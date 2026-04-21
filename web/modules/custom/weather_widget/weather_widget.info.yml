@@ -1,0 +1,8 @@
+name: 'Weather Widget'
+type: module
+description: 'A custom block showing live weather data from OpenWeatherMap API with Layout Builder support, IP-based location detection, and dynamic theming.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:block
+  - drupal:layout_builder

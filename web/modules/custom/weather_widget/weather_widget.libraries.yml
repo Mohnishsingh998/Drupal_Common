@@ -1,0 +1,6 @@
+forecast-ui:
+  css:
+    theme:
+      css/forecast-card.css: {}
+  js:
+    js/forecast-ui.js: {}

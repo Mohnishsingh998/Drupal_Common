@@ -1,0 +1,10 @@
+weather_widget.settings:
+  type: config_object
+  label: 'Weather Widget Settings'
+  mapping:
+    default_city:
+      type: string
+      label: 'Default City'
+    default_unit:
+      type: string
+      label: 'Default Unit'

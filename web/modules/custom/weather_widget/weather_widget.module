@@ -1,0 +1,22 @@
+<?php
+function weather_widget_theme() {
+  return [
+    'weather_widget_block' => [
+      'template' => 'block--weather-forecast',
+      'variables' => [
+        'data' => NULL,
+        'theme_style' => NULL,
+      ],
+    ],
+  ];
+}
+
+function weather_widget_preprocess_block(&$variables) {
+  if ($variables['plugin_id'] === 'weather_widget_block') {
+    $data = $variables['elements']['#data'] ?? [];
+
+    if (!empty($data['condition'])) {
+      $variables['attributes']['class'][] = 'is-' . strtolower($data['condition']);
+    }
+  }
+}
