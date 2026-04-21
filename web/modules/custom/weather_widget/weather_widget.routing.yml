@@ -12,3 +12,17 @@ weather_widget.location_weather:
     _controller: '\Drupal\weather_widget\Controller\WeatherController::getLocationWeather'
   requirements:
     _permission: 'access content'
+
+weather_widget.weekly:
+  path: '/weather-widget/weekly'
+  defaults:
+    _controller: '\Drupal\weather_widget\Controller\WeatherController::getWeekly'
+  requirements:
+    _permission: 'access content'
+
+weather_widget.weekly_city:
+  path: '/weather-widget/weekly-city'
+  defaults:
+    _controller: '\Drupal\weather_widget\Controller\WeatherController::getWeeklyByCity'
+  requirements:
+    _permission: 'access content'
