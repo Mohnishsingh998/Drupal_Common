@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\weather_widget\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
@@ -25,6 +26,9 @@ class WeatherWidgetBlock extends BlockBase implements ContainerFactoryPluginInte
     $this->configFactory = $config_factory;
   }
 
+  /**
+   *
+   */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $configuration,
@@ -35,6 +39,9 @@ class WeatherWidgetBlock extends BlockBase implements ContainerFactoryPluginInte
     );
   }
 
+  /**
+   *
+   */
   public function defaultConfiguration() {
     return [
       'city' => '',
@@ -43,6 +50,9 @@ class WeatherWidgetBlock extends BlockBase implements ContainerFactoryPluginInte
     ];
   }
 
+  /**
+   *
+   */
   public function blockForm($form, FormStateInterface $form_state) {
     $form['city'] = [
       '#type' => 'textfield',
@@ -67,12 +77,18 @@ class WeatherWidgetBlock extends BlockBase implements ContainerFactoryPluginInte
     return $form;
   }
 
+  /**
+   *
+   */
   public function blockSubmit($form, FormStateInterface $form_state) {
     $this->configuration['city'] = $form_state->getValue('city');
     $this->configuration['unit'] = $form_state->getValue('unit');
     $this->configuration['theme'] = $form_state->getValue('theme');
   }
 
+  /**
+   *
+   */
   public function build() {
     $config = $this->configFactory->get('weather_widget.settings');
 
@@ -94,4 +110,5 @@ class WeatherWidgetBlock extends BlockBase implements ContainerFactoryPluginInte
       ],
     ];
   }
+
 }

@@ -1,0 +1,29 @@
+uuid: 72f6469e-7bcb-41e7-9bd1-77af136afe9e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mood
+    - node.type.movies
+    - taxonomy.vocabulary.mood
+id: node.movies.field_mood
+field_name: field_mood
+entity_type: node
+bundle: movies
+label: Mood
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      mood: mood
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

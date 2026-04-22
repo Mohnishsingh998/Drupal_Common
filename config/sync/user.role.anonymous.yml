@@ -4,11 +4,16 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - node.type.movies
+    - taxonomy.vocabulary.genre
   module:
     - comment
     - filter
     - media
+    - node
     - search
+    - system
+    - taxonomy
 _core:
   default_config_hash: xLG41YbRo2NP-0SgRNTkMzLEuaeibanGXgUTbdIcIIg
 id: anonymous
@@ -17,6 +22,9 @@ weight: 0
 is_admin: false
 permissions:
   - 'access comments'
+  - 'access content'
   - 'search content'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view movies revisions'
+  - 'view term revisions in genre'

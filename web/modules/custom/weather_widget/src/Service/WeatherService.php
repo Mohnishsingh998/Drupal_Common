@@ -6,8 +6,10 @@ use GuzzleHttp\ClientInterface;
 use Drupal\Core\Site\Settings;
 use Psr\Log\LoggerInterface;
 
-class WeatherService
-{
+/**
+ *
+ */
+class WeatherService {
 
   protected ClientInterface $httpClient;
   protected Settings $settings;
@@ -16,7 +18,7 @@ class WeatherService
   public function __construct(
     ClientInterface $http_client,
     Settings $settings,
-    LoggerInterface $logger
+    LoggerInterface $logger,
   ) {
     $this->httpClient = $http_client;
     $this->settings = $settings;
@@ -24,10 +26,9 @@ class WeatherService
   }
 
   /**
-   * Fetch weather by city name
+   * Fetch weather by city name.
    */
-  public function getWeather(string $city, string $unit = 'metric'): array
-  {
+  public function getWeather(string $city, string $unit = 'metric'): array {
     return $this->makeRequest([
       'q' => $city,
       'units' => $unit,
@@ -35,10 +36,9 @@ class WeatherService
   }
 
   /**
-   * Fetch weather by coordinates
+   * Fetch weather by coordinates.
    */
-  public function getWeatherByCoords(float $lat, float $lon, string $unit = 'metric'): array
-  {
+  public function getWeatherByCoords(float $lat, float $lon, string $unit = 'metric'): array {
     if (!$lat || !$lon) {
       return ['error' => 'Invalid coordinates'];
     }
@@ -51,10 +51,9 @@ class WeatherService
   }
 
   /**
-   * Core request handler
+   * Core request handler.
    */
-  private function makeRequest(array $query): array
-  {
+  private function makeRequest(array $query): array {
     $apiKey = $this->settings->get('weather_api_key');
 
     try {
@@ -70,7 +69,8 @@ class WeatherService
       $data = json_decode($response->getBody(), TRUE);
 
       return $this->formatResponse($data);
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       $this->logger->error('Weather API error: @msg', [
         '@msg' => $e->getMessage(),
       ]);
@@ -80,10 +80,9 @@ class WeatherService
   }
 
   /**
-   * Format API response into UI-friendly structure
+   * Format API response into UI-friendly structure.
    */
-  private function formatResponse(array $data): array
-  {
+  private function formatResponse(array $data): array {
     $timezoneOffset = $data['timezone'] ?? 0;
 
     return [
@@ -102,8 +101,7 @@ class WeatherService
   /**
    * Fetch 7-day forecast using One Call API.
    */
-  public function getWeeklyForecast($lat, $lon, $unit = 'metric')
-  {
+  public function getWeeklyForecast($lat, $lon, $unit = 'metric') {
     $apiKey = $this->settings->get('weather_api_key');
 
     try {
@@ -123,16 +121,17 @@ class WeatherService
       $data = json_decode($response->getBody(), TRUE);
 
       return $this->formatForecast($data['list'] ?? []);
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       \Drupal::logger('weather_widget')->error($e->getMessage());
       return [];
     }
   }
+
   /**
    * Format 7-day forecast.
    */
-  private function formatForecast(array $list)
-  {
+  private function formatForecast(array $list) {
     $days = [];
 
     foreach ($list as $item) {
@@ -145,13 +144,17 @@ class WeatherService
         ];
       }
 
-      if (count($days) >= 7) break;
+      if (count($days) >= 7) {
+        break;
+      }
     }
 
     return array_values($days);
   }
 
-
+  /**
+   *
+   */
   public function getCoordsFromCity($city) {
     $apiKey = $this->settings->get('weather_api_key');
 
@@ -176,10 +179,11 @@ class WeatherService
         ];
       }
 
-      return null;
+      return NULL;
     }
     catch (\Exception $e) {
-      return null;
+      return NULL;
     }
   }
+
 }

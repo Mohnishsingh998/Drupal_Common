@@ -8,6 +8,9 @@ use Drupal\weather_widget\Service\WeatherService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 
+/**
+ *
+ */
 class WeatherController implements ContainerInjectionInterface {
 
   protected WeatherService $weatherService;
@@ -16,12 +19,18 @@ class WeatherController implements ContainerInjectionInterface {
     $this->weatherService = $weather_service;
   }
 
+  /**
+   *
+   */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('weather_widget.weather_service')
     );
   }
 
+  /**
+   *
+   */
   public function getLocationWeather(Request $request) {
     $lat = $request->query->get('lat');
     $lon = $request->query->get('lon');
@@ -35,38 +44,44 @@ class WeatherController implements ContainerInjectionInterface {
     return new JsonResponse($data);
   }
 
-      public function getWeekly(Request $request) {
-      $lat = $request->query->get('lat');
-      $lon = $request->query->get('lon');
+  /**
+   *
+   */
+  public function getWeekly(Request $request) {
+    $lat = $request->query->get('lat');
+    $lon = $request->query->get('lon');
 
-      if (!$lat || !$lon) {
-        return new JsonResponse([]);
-      }
-
-      $data = $this->weatherService->getWeeklyForecast((float) $lat, (float) $lon);
-
-      return new JsonResponse($data);
+    if (!$lat || !$lon) {
+      return new JsonResponse([]);
     }
 
-    public function getWeeklyByCity(Request $request) {
-      $city = $request->query->get('city');
+    $data = $this->weatherService->getWeeklyForecast((float) $lat, (float) $lon);
 
-      if (!$city) {
-        return new JsonResponse([]);
-      }
+    return new JsonResponse($data);
+  }
 
-      $coords = $this->weatherService->getCoordsFromCity($city);
+  /**
+   *
+   */
+  public function getWeeklyByCity(Request $request) {
+    $city = $request->query->get('city');
 
-      if (!$coords) {
-        return new JsonResponse([]);
-      }
-
-      $data = $this->weatherService->getWeeklyForecast(
-        $coords['lat'],
-        $coords['lon']
-      );
-
-      return new JsonResponse($data);
+    if (!$city) {
+      return new JsonResponse([]);
     }
+
+    $coords = $this->weatherService->getCoordsFromCity($city);
+
+    if (!$coords) {
+      return new JsonResponse([]);
+    }
+
+    $data = $this->weatherService->getWeeklyForecast(
+      $coords['lat'],
+      $coords['lon']
+    );
+
+    return new JsonResponse($data);
+  }
 
 }

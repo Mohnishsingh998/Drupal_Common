@@ -1,0 +1,29 @@
+uuid: deb91d61-84a0-4e0c-b4d9-67de36f9d94e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_language
+    - node.type.movies
+    - taxonomy.vocabulary.language
+id: node.movies.field_language
+field_name: field_language
+entity_type: node
+bundle: movies
+label: Language
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      language: language
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
