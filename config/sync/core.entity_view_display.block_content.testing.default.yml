@@ -1,0 +1,22 @@
+uuid: 77286cbb-de2e-4133-8d5a-8eb88f80c282
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - block_content.type.testing
+    - field.field.block_content.testing.field_submitted
+id: block_content.testing.default
+targetEntityType: block_content
+bundle: testing
+mode: default
+content:
+  field_submitted:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -3,6 +3,7 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - block_content.type.testing
     - field.field.node.movies.field_description
     - field.field.node.movies.field_genre
     - field.field.node.movies.field_language
@@ -10,79 +11,192 @@ dependencies:
     - field.field.node.movies.field_poster
     - field.field.node.movies.field_rating
     - field.field.node.movies.field_release_year
+    - field.field.node.movies.layout_builder__layout
     - node.type.movies
   module:
-    - text
+    - layout_builder
+    - layout_discovery
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          4e5f6a3c-1795-4b2d-8a2e-d59d1fc6f9c8:
+            uuid: 4e5f6a3c-1795-4b2d-8a2e-d59d1fc6f9c8
+            region: content
+            configuration:
+              id: 'extra_field_block:node:movies:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          371e5f90-d2e0-4941-bfc8-1b2f9eea29da:
+            uuid: 371e5f90-d2e0-4941-bfc8-1b2f9eea29da
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          aaadfbf5-6131-4af5-a33a-11718507b463:
+            uuid: aaadfbf5-6131-4af5-a33a-11718507b463
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_poster'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          644beca4-2020-4653-ae18-a4408700950c:
+            uuid: 644beca4-2020-4653-ae18-a4408700950c
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_release_year'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          953d1a6e-b854-4596-b605-7163e9d6490f:
+            uuid: 953d1a6e-b854-4596-b605-7163e9d6490f
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_rating'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_decimal
+                label: above
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          546d1ffb-2e23-4746-b1ae-2b82ff5f64a3:
+            uuid: 546d1ffb-2e23-4746-b1ae-2b82ff5f64a3
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_genre'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          b20b4ad9-bfd4-4388-85a7-c852cb086a22:
+            uuid: b20b4ad9-bfd4-4388-85a7-c852cb086a22
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_mood'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          3e05bc73-d731-4fda-8a63-d0981042fd54:
+            uuid: 3e05bc73-d731-4fda-8a63-d0981042fd54
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_language'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          672b8c9e-de63-4655-a2f3-9105cd732eee:
+            uuid: 672b8c9e-de63-4655-a2f3-9105cd732eee
+            region: content
+            configuration:
+              id: 'inline_block:testing'
+              label: 'It is just the testing of the block placinf'
+              label_display: visible
+              provider: layout_builder
+              context_mapping: {  }
+              view_mode: full
+              block_id: 15
+              block_revision_id: 15
+              block_serialized: null
+            weight: 8
+            additional: {  }
+          99eb85b0-4634-4f41-8da1-6653d645cff6:
+            uuid: 99eb85b0-4634-4f41-8da1-6653d645cff6
+            region: content
+            configuration:
+              id: 'inline_block:testing'
+              label: 'Today is 28 april'
+              label_display: visible
+              provider: layout_builder
+              context_mapping: {  }
+              view_mode: full
+              block_id: 16
+              block_revision_id: 16
+              block_serialized: null
+            weight: 9
+            additional: {  }
+        third_party_settings: {  }
 id: node.movies.default
 targetEntityType: node
 bundle: movies
 mode: default
-content:
-  field_description:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  field_genre:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 105
-    region: content
-  field_language:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 107
-    region: content
-  field_mood:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 106
-    region: content
-  field_poster:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  field_rating:
-    type: number_decimal
-    label: above
-    settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 104
-    region: content
-  field_release_year:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 103
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
+content: {  }
 hidden:
+  field_description: true
+  field_genre: true
+  field_language: true
+  field_mood: true
+  field_poster: true
+  field_rating: true
+  field_release_year: true
   langcode: true
+  layout_builder__layout: true
+  links: true

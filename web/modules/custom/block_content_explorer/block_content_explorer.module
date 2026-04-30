@@ -1,0 +1,25 @@
+<?php
+/**
+ * Implements hook_block_content_access().
+ */
+function block_content_explorer_block_content_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  if ($entity instanceof \Drupal\block_content\BlockContentInterface && !$entity->isReusable()) {
+    // If the user is an admin, allow them to manage inline blocks directly.
+    if ($account->hasPermission('administer block_content') || $account->hasPermission('administer block content')) {
+      return \Drupal\Core\Access\AccessResult::allowed()
+        ->addCacheableDependency($entity)
+        ->setCacheMaxAge(0);
+    }
+  }
+  return \Drupal\Core\Access\AccessResult::neutral();
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function block_content_explorer_entity_type_alter(array &$entity_types) {
+  if (isset($entity_types['block_content'])) {
+    // Override the default access handler with our custom explorer handler.
+    $entity_types['block_content']->setHandlerClass('access', 'Drupal\block_content_explorer\BlockContentExplorerAccessHandler');
+  }
+}

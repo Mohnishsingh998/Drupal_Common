@@ -49,6 +49,7 @@
             renderWeekly(days);
           })
           .catch(() => console.log('Fallback weekly failed'));
+
       }
     );
 
@@ -63,7 +64,10 @@
 
     fetch(`/weather-widget/weekly-city?city=${encodeURIComponent(city)}`)
       .then(res => res.json())
-      .then(days => renderWeekly(days));
+      .then(days => {
+            console.log("Weekly (city):", days);
+            renderWeekly(days);
+          })
   }
 
   function updateUI(card, data) {
@@ -88,7 +92,6 @@
   function renderWeekly(days) {
     const container = document.querySelector('.forecast-weekly');
     if (!container) return;
-
     if (!days.length) {
       container.innerHTML = '<span>No forecast available</span>';
       return;

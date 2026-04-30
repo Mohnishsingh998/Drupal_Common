@@ -1,0 +1,4 @@
+block_content_explorer.tab:
+  route_name: block_content_explorer.list
+  title: 'Block Content Explorer'
+  base_route: system.admin_content

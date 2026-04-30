@@ -1,0 +1,16 @@
+block_content_explorer.list:
+  path: '/admin/content/block-explorer'
+  defaults:
+    _title: 'Block Content Explorer'
+    _view_id: 'block_content_explorer'
+    _view_display_plugin_id: 'page_1'
+  requirements:
+    _permission: 'access block content explorer'
+
+block_content_explorer.settings:
+  path: '/admin/config/content/block-explorer/settings'
+  defaults:
+    _title: 'Block Content Explorer Settings'
+    _form: 'Drupal\block_content_explorer\Form\SettingsForm'
+  requirements:
+    _permission: 'administer block content explorer'

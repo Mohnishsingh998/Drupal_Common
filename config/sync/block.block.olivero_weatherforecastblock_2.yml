@@ -1,4 +1,4 @@
-uuid: 482c384c-ac7e-4059-80cc-3bd688b18f14
+uuid: daf98b28-574c-459f-975f-b8e0c9002e86
 langcode: en-gb
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - weather_widget
   theme:
     - olivero
-id: olivero_weatherforecastblock
+id: olivero_weatherforecastblock_2
 theme: olivero
 region: sidebar
 weight: 0
@@ -17,7 +17,7 @@ settings:
   label: 'Weather Forecast Block'
   label_display: visible
   provider: weather_widget
-  city: Indore
-  unit: imperial
+  city: Pune
+  unit: metric
   theme: light
 visibility: {  }

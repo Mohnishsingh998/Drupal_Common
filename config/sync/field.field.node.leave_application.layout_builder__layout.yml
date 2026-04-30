@@ -1,0 +1,21 @@
+uuid: a89b22cf-1332-4450-9810-ab943a5a7a5f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.leave_application
+  module:
+    - layout_builder
+id: node.leave_application.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: leave_application
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

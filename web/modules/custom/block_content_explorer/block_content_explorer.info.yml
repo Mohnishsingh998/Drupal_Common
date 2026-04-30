@@ -1,0 +1,9 @@
+name: Block Content Explorer
+type: module
+description: 'Provides a unified admin listing of all block_content entities (reusable + inline), orphan detection, auto-cleanup, and Drush commands for auditing.'
+package: Administration
+core_version_requirement: ^11.0
+dependencies:
+  - drupal:block_content
+  - drupal:layout_builder
+  - drupal:views

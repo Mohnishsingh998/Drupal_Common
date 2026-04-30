@@ -1,0 +1,11 @@
+uuid: b49f3786-29d1-47cd-81ff-4c278f4764cc
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.custom_block_content
+id: node.custom_block_content
+target_entity_type_id: node
+target_bundle: custom_block_content
+default_langcode: site_default
+language_alterable: false

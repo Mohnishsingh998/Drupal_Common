@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.movies.field_poster
     - field.field.node.movies.field_rating
     - field.field.node.movies.field_release_year
+    - field.field.node.movies.layout_builder__layout
     - node.type.movies
   module:
     - content_moderation
@@ -131,5 +132,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  layout_builder__layout: true
   promote: true
   sticky: true

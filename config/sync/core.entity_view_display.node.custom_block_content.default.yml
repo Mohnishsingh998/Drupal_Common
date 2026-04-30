@@ -1,0 +1,38 @@
+uuid: a59d1e6b-c62e-4e42-855d-dbceec357a1e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.custom_block_content
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          546f911b-d50b-47b9-8df6-c4841b226b38:
+            uuid: 546f911b-d50b-47b9-8df6-c4841b226b38
+            region: content
+            configuration:
+              id: 'extra_field_block:node:custom_block_content:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.custom_block_content.default
+targetEntityType: node
+bundle: custom_block_content
+mode: default
+content: {  }
+hidden:
+  langcode: true
+  links: true

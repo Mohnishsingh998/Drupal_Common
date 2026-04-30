@@ -1,0 +1,5 @@
+block_content_explorer.settings:
+  title: 'Block Content Explorer'
+  description: 'Configure block content explorer settings and orphan cleanup.'
+  route_name: block_content_explorer.settings
+  parent: system.admin_config_content

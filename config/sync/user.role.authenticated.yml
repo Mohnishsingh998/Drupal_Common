@@ -3,14 +3,21 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - block_content.type.basic
+    - block_content.type.testing
     - filter.format.basic_html
     - filter.format.webform_default
+    - node.type.custom_block_content
     - node.type.leave_application
   module:
+    - block_content
+    - block_content_explorer
     - comment
+    - contextual
     - field_ui
     - file
     - filter
+    - layout_builder
     - media
     - node
     - search
@@ -24,25 +31,40 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access block content explorer'
   - 'access comments'
   - 'access content'
   - 'access content overview'
+  - 'access contextual links'
   - 'access shortcuts'
+  - 'administer block content'
+  - 'administer block content explorer'
   - 'administer content types'
   - 'administer display modes'
   - 'administer node published status'
   - 'administer nodes'
   - 'administer views'
+  - 'configure any layout'
+  - 'create and edit custom blocks'
+  - 'create basic block content'
+  - 'create custom_block_content content'
   - 'create leave_application content'
+  - 'create testing block content'
   - 'delete any leave_application content'
   - 'delete leave_application revisions'
   - 'delete own files'
   - 'delete own leave_application content'
+  - 'edit any basic block content'
+  - 'edit any custom_block_content content'
   - 'edit any leave_application content'
+  - 'edit any testing block content'
+  - 'edit own custom_block_content content'
   - 'post comments'
+  - 'revert custom_block_content revisions'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'use text format webform_default'
+  - 'view custom_block_content revisions'
   - 'view media'
   - 'view own unpublished content'

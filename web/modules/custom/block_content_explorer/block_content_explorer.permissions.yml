@@ -1,0 +1,7 @@
+access block content explorer:
+  title: 'Access Block Content Explorer'
+  description: 'View block explorer listing'
+
+administer block content explorer:
+  title: 'Administer Block Content Explorer'
+  description: 'Manage settings and cleanup'

@@ -1,0 +1,27 @@
+services:
+  block_content_explorer.access_check:
+    class: Drupal\block_content_explorer\Access\BlockContentAccessCheck
+    tags:
+      - { name: access_check, applies_to: _custom_access }
+  
+  block_content_explorer.route_subscriber:
+    class: Drupal\block_content_explorer\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  block_content_explorer.orphan_detector:
+    class: Drupal\block_content_explorer\Service\OrphanDetector
+    arguments:
+      - '@entity_type.manager'
+      - '@database'
+
+  block_content_explorer.orphan_cleaner:
+    class: Drupal\block_content_explorer\Service\OrphanCleaner
+    arguments:
+      - '@entity_type.manager'
+      - '@database'
+      - '@logger.channel.block_content_explorer'
+
+  logger.channel.block_content_explorer:
+    parent: logger.channel_base
+    arguments: ['block_content_explorer']

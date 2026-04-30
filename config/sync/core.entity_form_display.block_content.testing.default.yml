@@ -1,0 +1,36 @@
+uuid: 9af8fdb9-86ee-4193-bc3a-08a3c50c33eb
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - block_content.type.testing
+    - field.field.block_content.testing.field_submitted
+id: block_content.testing.default
+targetEntityType: block_content
+bundle: testing
+mode: default
+content:
+  field_submitted:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

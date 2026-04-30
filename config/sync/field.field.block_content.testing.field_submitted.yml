@@ -1,0 +1,19 @@
+uuid: df332346-fdb4-4e22-b1b0-aca3e8579651
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - block_content.type.testing
+    - field.storage.block_content.field_submitted
+id: block_content.testing.field_submitted
+field_name: field_submitted
+entity_type: block_content
+bundle: testing
+label: Submitted
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

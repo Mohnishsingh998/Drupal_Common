@@ -11,88 +11,211 @@ dependencies:
     - field.field.node.leave_application.field_leave_type
     - field.field.node.leave_application.field_reason
     - field.field.node.leave_application.field_to_date
+    - field.field.node.leave_application.layout_builder__layout
     - node.type.leave_application
+  content:
+    - 'block_content:basic:0636e1e9-9e05-43de-8b12-9421d1b40c09'
   module:
-    - datetime
-    - file
-    - options
+    - block_content
+    - layout_builder
+    - layout_discovery
     - user
+    - weather_widget
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: weather
+          context_mapping: {  }
+        components:
+          28a28775-1bc5-4dd1-ad11-1cba6b18f5b4:
+            uuid: 28a28775-1bc5-4dd1-ad11-1cba6b18f5b4
+            region: content
+            configuration:
+              id: weather_widget_block
+              label: 'Weather Forecast Block'
+              label_display: visible
+              provider: weather_widget
+              context_mapping: {  }
+              city: Bhopal
+              unit: metric
+              theme: light
+            weight: 0
+            additional: {  }
+          72fc58fe-00de-48f1-9801-1644b39bcb49:
+            uuid: 72fc58fe-00de-48f1-9801-1644b39bcb49
+            region: content
+            configuration:
+              id: 'block_content:0636e1e9-9e05-43de-8b12-9421d1b40c09'
+              label: Quae
+              label_display: visible
+              provider: block_content
+              context_mapping: {  }
+              view_mode: full
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          3ced68e4-0174-4dcb-9230-17bd6348b3cd:
+            uuid: 3ced68e4-0174-4dcb-9230-17bd6348b3cd
+            region: content
+            configuration:
+              id: 'extra_field_block:node:leave_application:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          e0618c59-be80-4e34-81b9-f5a7615c4645:
+            uuid: e0618c59-be80-4e34-81b9-f5a7615c4645
+            region: content
+            configuration:
+              id: 'field_block:node:leave_application:field_applicant'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          8e049764-c5cb-4bf1-a6ee-ff2dc0cb1236:
+            uuid: 8e049764-c5cb-4bf1-a6ee-ff2dc0cb1236
+            region: content
+            configuration:
+              id: 'field_block:node:leave_application:field_leave_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          f30e1523-4b87-4feb-bf12-c413f390fc10:
+            uuid: f30e1523-4b87-4feb-bf12-c413f390fc10
+            region: content
+            configuration:
+              id: 'field_block:node:leave_application:field_from_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          658ac04a-a832-4a80-b1ad-319380fe1c31:
+            uuid: 658ac04a-a832-4a80-b1ad-319380fe1c31
+            region: content
+            configuration:
+              id: 'field_block:node:leave_application:field_to_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          9f72857f-33fb-414a-a3f5-604ec5838088:
+            uuid: 9f72857f-33fb-414a-a3f5-604ec5838088
+            region: content
+            configuration:
+              id: 'field_block:node:leave_application:field_reason'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          a6fbf872-d428-4e65-802b-b7246274290f:
+            uuid: a6fbf872-d428-4e65-802b-b7246274290f
+            region: content
+            configuration:
+              id: 'field_block:node:leave_application:field_attachment'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          f63d49aa-1b21-4fc9-9124-ffccac8fe986:
+            uuid: f63d49aa-1b21-4fc9-9124-ffccac8fe986
+            region: content
+            configuration:
+              id: 'field_block:node:leave_application:field_faculty_approved'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          e8293e96-1187-449e-8716-fe25f9d53c6c:
+            uuid: e8293e96-1187-449e-8716-fe25f9d53c6c
+            region: content
+            configuration:
+              id: 'field_block:node:leave_application:field_hod_comment'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+        third_party_settings: {  }
 id: node.leave_application.default
 targetEntityType: node
 bundle: leave_application
 mode: default
-content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
-  field_applicant:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_attachment:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_faculty_approved:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_from_date:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_hod_comment:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  field_leave_type:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_reason:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_to_date:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden:
+  content_moderation_control: true
+  field_applicant: true
+  field_attachment: true
+  field_faculty_approved: true
+  field_from_date: true
+  field_hod_comment: true
+  field_leave_type: true
+  field_reason: true
+  field_to_date: true
   langcode: true
+  layout_builder__layout: true
+  links: true

@@ -7,24 +7,51 @@ dependencies:
     - node.type.custom_upload
   module:
     - file
+    - layout_builder
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9da4326e-e43c-49bb-a04f-815a24c751b4:
+            uuid: 9da4326e-e43c-49bb-a04f-815a24c751b4
+            region: content
+            configuration:
+              id: 'extra_field_block:node:custom_upload:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          a93202f0-81d6-41fb-8317-cf76f1f5942d:
+            uuid: a93202f0-81d6-41fb-8317-cf76f1f5942d
+            region: content
+            configuration:
+              id: 'field_block:node:custom_upload:field_files_to_upload'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: node.custom_upload.default
 targetEntityType: node
 bundle: custom_upload
 mode: default
-content:
-  field_files_to_upload:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
+content: {  }
 hidden:
   langcode: true
+  links: true
+  field_files_to_upload: true
